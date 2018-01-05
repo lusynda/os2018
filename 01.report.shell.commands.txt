@@ -1,0 +1,57 @@
+#echo hello world
+hello world
+
+#passwd 
+Changing password for trung.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+
+#date 
+Fri Jan  5 10:43:42 +07 2018
+
+#hostname
+parrot
+
+#arch
+x86_64
+
+#uname -a
+Linux parrot 4.14.0-parrot7-amd64 #1 SMP Parrot 4.14.7-1parrot7 (2017-12-28) x86_64 GNU/Linux
+
+#uptime 
+10:45:56 up 49 min,  1 user,  load average: 0.34, 0.13, 0.04
+
+#whoami
+root
+
+#who
+trung    tty7         2018-01-05 09:54 (:0)
+
+#id
+uid=0(root) gid=0(root) groups=0(root)
+
+#finger
+Login     Name       Tty      Idle  Login Time   Office     Office Phone
+trung     trung      tty7     1:09  Jan  5 09:54 (:0)
+
+#w
+ 10:51:20 up 55 min,  1 user,  load average: 0.01, 0.05, 0.01
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+trung    tty7     :0               09:54   57:24  12.01s  0.24s x-sessi
+
+#last 
+trung    tty7         :0               Fri Jan  5 09:54    gone - no logout
+reboot   system boot  4.14.0-parrot7-a Fri Jan  5 09:53   still running
+trung    tty7         :0               Fri Jan  5 08:39 - down   (01:14)
+reboot   system boot  4.14.0-parrot7-a Fri Jan  5 08:38 - 09:53  (01:14)
+trung    tty7         :0               Mon Jan  1 15:03 - 15:17  (00:13)
+reboot   system boot  4.14.0-parrot7-a Mon Jan  1 14:55 - 15:17  (00:22)
+trung    tty7         :0               Mon Jan  1 14:24 - down   (00:30)
+reboot   system boot  4.14.0-parrot2-a Mon Jan  1 14:23 - 14:54  (00:30)
+trung    tty7         :0               Sat Dec 30 18:58 - down   (02:18)
+reboot   system boot  4.14.0-parrot2-a Sat Dec 30 18:57 - 21:16  (02:18)
+
+name: Nguyen Ngoc Trung
+ID: USTHBI7-154
