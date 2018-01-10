@@ -1,0 +1,16 @@
+#ls | grep list
+
+#cat /etc/passwd | wc -l
+59
+
+#free | grep Mem | awk '{print $2}'
+
+#cat /proc/cpuinfo | grep "cpu core" | cat
+cpu cores	: 1
+
+#ls
+071.JPG  072.JPG  082.JPG  083.JPG  1  2  test
+#cd -- "$(find / -name Photo)" | ls | grep JPG | wc -l
+4
+
+
