@@ -5,7 +5,7 @@
 
 #free | grep Mem | awk '{print $2}'
 
-#cat /proc/cpuinfo | grep "cpu core" | cat
+#cat /proc/cpuinfo | grep "cpu core"
 cpu cores	: 1
 
 #ls
