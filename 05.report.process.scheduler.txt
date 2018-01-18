@@ -1,4 +1,4 @@
-#sudo cat /proc/sched_debug | grep systemd
+#sudo cat /proc/sched_debug | grep "systemd "
 runnable tasks:
 S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
 -----------------------------------------------------------------------------------------------------------
