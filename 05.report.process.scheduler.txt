@@ -1,0 +1,21 @@
+#sudo cat /proc/sched_debug | grep systemd
+runnable tasks:
+S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+-----------------------------------------------------------------------------------------------------------
+S        systemd     1     75408.283977      2071   120         0.000000      3071.128723         0.000000 0 0 /
+S systemd-journal   276     75950.214521      1274   120         0.000000       353.387474         0.000000 0 0 /
+S  systemd-udevd   307     75408.162952      1599   120         0.000000       282.148447         0.000000 0 0 /
+S systemd-timesyn   360     75280.469166        72   120         0.000000        43.932329         0.000000 0 0 /
+S systemd-logind   584     75942.940016       690   120         0.000000        61.701661         0.000000 0 0 /
+S        systemd  1337     22691.143726       137   120         0.000000        59.706189         0.000000 0 0 /
+
+#sudo cat /proc/1/sched | grep switches
+nr_switches                                  :                 2100
+nr_voluntary_switches                        :                  909
+nr_involuntary_switches                      :                 1191
+
+#sudo cat /proc/1337/sched | grep switches
+nr_switches                                  :                  137
+nr_voluntary_switches                        :                   84
+nr_involuntary_switches                      :                   53
+
