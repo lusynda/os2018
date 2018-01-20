@@ -1,0 +1,17 @@
+#cat /proc/sched_debug | grep firefox | awk '{print $3}'
+1664
+1698
+
+first way:
+
+#ps -o nlwp 1664
+NLWP
+  50
+
+#ps -o nlwp 1698
+NLWP
+
+second way:
+#ls /proc/1664/task/ | wc -l
+50
+
