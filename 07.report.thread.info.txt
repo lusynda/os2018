@@ -6,12 +6,13 @@ first way:
 
 #ps -o nlwp 1664
 NLWP
-  50
+  49
 
 #ps -o nlwp 1698
 NLWP
 
 second way:
 #ls /proc/1664/task/ | wc -l
-50
+49
+
 
