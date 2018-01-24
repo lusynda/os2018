@@ -66,9 +66,9 @@ int main(){
 
 	pthread_create(&tid1, NULL, pthread_produce, NULL);
 
-	pthread_join(tid1, NULL);
-
 	pthread_create(&tid2, NULL, pthread_consume, NULL);
+
+	pthread_join(tid1, NULL);
 
 	pthread_join(tid2, NULL);
 }
