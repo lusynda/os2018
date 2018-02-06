@@ -21,12 +21,10 @@ sem_t S;
 void wait(int S){
 	while(S <= 0);
 	S--;
-	m = 0;
 }
 
 void signal(int S){
 	S++;
-	m = 1;
 }
 
 void produce(item *i){
