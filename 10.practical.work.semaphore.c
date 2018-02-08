@@ -16,36 +16,25 @@ item buffer[BUFFER_SIZE];
 int first = 0;
 int last = 0;
 int m = 1;
-sem_t S;
-
-void wait(int S){
-	while(S <= 0);
-	S--;
-}
-
-void signal(int S){
-	S++;
-}
+sem_t s;
 
 void produce(item *i){
 	while((first + 1) % BUFFER_SIZE == last){
 	}
-	wait(m);
+	sem_wait(&s);
 	memcpy(&buffer[first], i, sizeof(item));
 	first = (first + 1) % BUFFER_SIZE;
-	signal(m);
+	sem_post(&s);
 }
-
-
 
 item *consume(){
 	item *i = malloc(sizeof(item));
 	while (first == last){
 	}
-	wait(m);
+	sem_wait(&s);
 	memcpy(i, &buffer[last], sizeof(item));
 	last = (last + 1) % BUFFER_SIZE;
-	signal(m);
+	sem_post(&s);
 	return i;
 }
 
@@ -79,6 +68,8 @@ void *pthread_consume(void *param){
 }
 
 int main(){
+	sem_init(&s, 0, 1);
+
 	pthread_t tid1, tid2;
 
 	pthread_create(&tid1, NULL, pthread_produce, NULL);
